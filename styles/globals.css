@@ -1,16 +1,68 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  body {
+    @apply bg-[#101219] text-[#9dc3e3] text-lg m-0 p-0 font-sans;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bold text-[#8ebee4];
+  }
+
+  h1 {
+    @apply text-4xl sm:text-5xl md:text-7xl font-sans text-[#e9f7ff];
+  }
+
+  h2 {
+    @apply text-3xl md:text-4xl font-sans text-[#e9f7ff];
+  }
+
+  h3 {
+    @apply text-2xl sm:text-3xl;
+  }
+
+  h4 {
+    @apply text-xl sm:text-2xl;
+  }
+
+  h5 {
+    @apply text-lg sm:text-xl;
+  }
+
+  li {
+    @apply cursor-pointer;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+button {
+  @apply px-6 py-2 mx-2 rounded-lg font-bold text-white bg-gradient-to-b from-[#7ebfed] to-[#2c62be] shadow-md shadow-blue-700/50 hover:translate-y-[-8px] transition-all;
 }
 
-* {
-  box-sizing: border-box;
+@layer components {
+  .content-container {
+    @apply flex flex-col lg:px-[25vw] md:px-[20vw] px-[25px] justify-center gap-6;
+  }
+
+  .character {
+    white-space: break-spaces;
+    text-shadow: 2px 6px 20px #153969;
+    @apply font-bold text-4xl sm:text-5xl md:text-7xl;
+  }
+
+  .subheading {
+    white-space: break-spaces;
+    text-shadow: 2px 6px 20px #153969;
+    @apply font-bold text-3xl sm:text-5xl md:text-6xl;
+  }
 }
