@@ -122,7 +122,7 @@ const Background = () => {
     <>
       <Sketch
         className={
-          "canvas fixed top-0 left-0 z-[-1] before:w-screen before:h-screen before:bg-gradient-to-b before:opacoty from-black to-[#e8e8e8] via-[#6c98d1] before:absolute before:mix-blend-overlay"
+          "canvas fixed top-0 left-0 z-[-1] before:w-screen before:h-screen before:bg-gradient-to-b from-[rgb(0,4,17)] to-[rgb(1,23,53)] via-[rgb(1,18,53)] before:absolute before:mix-blend-lighten"
         }
         mouseMoved={mouseMoved}
         setup={setup}

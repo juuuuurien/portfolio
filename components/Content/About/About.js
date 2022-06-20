@@ -37,12 +37,12 @@ const About = () => {
       initial="hidden"
       whileInView={"shown"}
       exit="exit"
-      className="content-container pt-[15vh] pb-[15vh] px-[28vw]"
-      viewport={{ once: true, amount: 0.6 }}
+      className="content-container py-[10vh] pb-[20vh]"
+      viewport={{ once: true, amount: 0.5 }}
     >
       <motion.h3
         variants={children}
-        className="mb-10 after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-5px] after:ml-4 "
+        className="section-heading mb-10 after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-5px] after:ml-4 "
       >
         About me
       </motion.h3>
@@ -66,9 +66,11 @@ const About = () => {
         </motion.span>
         . As a tier 2 moderator, I work with a team of like-minded moderators to
         help manage, build, and protect online communities all over the world.
-        Although my current occupation isn't 100% programming, it is my dream to
-        be a developer who is passionate about programming, web design, and
-        creating new things.
+        Although my current occupation isn't 100% programming,{" "}
+        <span className="text-white">
+          it is my dream to be a developer who is passionate about programming ,
+          web design, and creating new things .
+        </span>
       </motion.p>
       <motion.p variants={children}>
         {

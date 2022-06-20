@@ -10,6 +10,7 @@ const Project = ({
   title,
   align,
   href,
+  tools,
 }) => {
   let imgPos;
   let descPos;
@@ -45,11 +46,22 @@ const Project = ({
       </motion.div>
       <motion.div
         variants={descriptionVariants}
-        className={`${descPos} lg:row-start-1 lg:row-end-2 md:row-start-3 md:row-end-6 xs:row-start-1  xs:row-end-3 self-center text-${align} z-10`}
+        className={`${descPos} lg:row-start-1 lg:row-end-2 md:row-start-3 md:row-end-6 xs:row-start-1  xs:row-end-3 self-center z-10 ${align}`}
       >
         <h4 className="my-4 lg:px-0 px-6">{title}</h4>
-        <div className="p-6 rounded-xl lg:rounded-md bg-[#022a68]">
+        <div className="p-6 rounded-xl lg:rounded-sm bg-[#022a68]">
           {description}
+        </div>
+        <div className="p-3 rounded-xl my-4 lg:rounded-sm ">
+          <ul
+            className={`flex flex-row ${
+              align === "right" ? "justify-end" : "justify-start"
+            } gap-5 font-mono`}
+          >
+            {tools?.map((tool) => (
+              <li className="text-sm">{tool}</li>
+            ))}
+          </ul>
         </div>
       </motion.div>
     </motion.div>

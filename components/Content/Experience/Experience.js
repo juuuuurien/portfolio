@@ -48,13 +48,13 @@ const Experience = () => {
         initial="hidden"
         whileInView="shown"
         className="flex flex-col items-center lg:max-w-[55vw] max-w-[80vw] gap-10"
-        viewport={{ once: true, amount: 0.7 }}
+        viewport={{ once: true, amount: 0.5 }}
       >
         <motion.h3
           variants={containerVariants}
           initial="hidden"
           animate="shown"
-          className="mb-10 self-start after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-8px] after:ml-4 "
+          className="section-heading mb-10 self-start after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-8px] after:ml-4 "
         >
           Things I'm Proud Of
         </motion.h3>
@@ -65,6 +65,7 @@ const Experience = () => {
           descriptionVariants={descriptionVariants}
           src={"/assets/thockey-display.png"}
           hoverSrc={"/assets/thockey-preview.gif"}
+          tools={["React", "CSS3", "HTML5", "LocalStorage", "Figma"]}
           title={
             <>
               Thockey.io -{" "}
@@ -86,11 +87,17 @@ const Experience = () => {
           imageVariants={imageVariants}
           descriptionVariants={descriptionVariants}
           src={"/assets/flexlog-display-2.png"}
+          tools={[
+            "React Native",
+            "Reanimated 2",
+            "ReactNative Paper",
+            "Figma",
+            "AsyncStorage",
+          ]}
           title={
             <>
               FlexLog -
               <span className="font-normal text-lg">
-                {" "}
                 {" Workout Tracker for Android"}
               </span>
             </>
