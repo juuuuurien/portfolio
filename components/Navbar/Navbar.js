@@ -65,7 +65,7 @@ const Navbar = ({ page, setPage, style }) => {
     <motion.div
       animate={navY}
       style={style}
-      className="flex fixed w-full px-[10vw] pb-8 pt-4 items-center justify-between bg-[#020711c1]"
+      className="flex fixed w-screen px-[10vw] pb-8 pt-4 items-center justify-between bg-[#020711c1]"
     >
       <h4 className="mx-10">Logo</h4>
       <nav>

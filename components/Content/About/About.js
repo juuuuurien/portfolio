@@ -52,7 +52,7 @@ const About = () => {
         beautiful designs with lines of code, I was hooked.
       </motion.p>
       <motion.p variants={children}>
-        I'm currently proudly working as a tier 2 moderator at{" "}
+        I am currently proudly working as a tier 2 moderator at{" "}
         <motion.span
           className="inline-block character"
           whileHover={{
@@ -60,13 +60,13 @@ const About = () => {
             transition: { duration: 0.1 },
           }}
         >
-          <a href="https://modsquad.com/" target="_blank">
+          <a href="https://modsquad.com/" target="_new">
             <Image src={ModSquad} width="120" height="40" />
           </a>
         </motion.span>
-        . As a tier 2 moderator, I work with a team of like-minded moderators to
-        help manage, build, and protect online communities all over the world.
-        Although my current occupation isn't 100% programming,{" "}
+        {
+          ". As a tier 2 moderator, I work with a team of like-minded moderators to help manage, build, and protect online communities all over the world. Although my current occupation is not 100% programming, "
+        }
         <span className="text-white">
           it is my dream to be a developer who is passionate about programming ,
           web design, and creating new things .

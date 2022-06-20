@@ -35,7 +35,7 @@ const Project = ({
         }}
         className={`${imgPos} relative  lg:row-start-1 lg:row-end-2 md:row-start-1 md:row-end-4 xs:row-start-3 xs:row-end-6 z-0 shadow-md`}
       >
-        <a className="group" href={href} target="_blank">
+        <a className="group" href={href} target="_new">
           <img className="rounded-md z-0 h-[100%]  w-[100%]" src={hoverSrc} />
           <img
             className="rounded-md top-[0] h-[100%] w-[100%] z-10 brightness-50 absolute group-hover:opacity-0 transition-all duration-500 before"
@@ -58,8 +58,10 @@ const Project = ({
               align === "right" ? "justify-end" : "justify-start"
             } gap-5 font-mono`}
           >
-            {tools?.map((tool) => (
-              <li className="text-sm">{tool}</li>
+            {tools?.map((tool, i) => (
+              <li className="text-sm" key={i}>
+                {tool}
+              </li>
             ))}
           </ul>
         </div>

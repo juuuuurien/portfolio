@@ -56,7 +56,7 @@ const Experience = () => {
           animate="shown"
           className="section-heading mb-10 self-start after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-8px] after:ml-4 "
         >
-          Things I'm Proud Of
+          {"Things I'm Proud Of"}
         </motion.h3>
         <Project
           href="https://www.thockey.io/"

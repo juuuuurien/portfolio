@@ -66,7 +66,7 @@ const Homepage = () => {
           Front end web developer.
         </motion.h2>
         <motion.p variants={children} className="max-w-lg">
-          I'm a <strong className="text-yellow-300">Fi</strong>
+          I am a <strong className="text-yellow-300">Fi</strong>
           <strong className=" text-blue-500">li</strong>
           <strong className="text-red-500">pi</strong>
           <strong className=" text-white">no</strong>-American software engineer

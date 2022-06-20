@@ -4,11 +4,11 @@
 
 @layer base {
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth overflow-x-hidden;
   }
 
   body {
-    @apply bg-[#101219] text-[#498fd5] text-lg m-0 p-0 font-sans;
+    @apply bg-[#101219] text-[#498fd5] text-lg m-0 p-0 font-sans overflow-x-hidden;
   }
 
   h1,
