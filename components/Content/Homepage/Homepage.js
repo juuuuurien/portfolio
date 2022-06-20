@@ -82,7 +82,7 @@ const Homepage = () => {
         </motion.p>
       </motion.section>
       <div className="flex flex-col items-center justify-center">
-        {/* <SvgPortrait /> */}
+        <SvgPortrait />
       </div>
     </div>
   );
