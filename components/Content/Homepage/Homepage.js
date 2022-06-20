@@ -72,7 +72,7 @@ const Homepage = () => {
           <strong className=" text-white">no</strong>-American software engineer
           specializing in the front end. Using modern technologies such as React
           and React Native, I strive to make smooth, design-minded digital
-          experiences.
+          experiences!
         </motion.p>
         <motion.p variants={children}>
           {"Like what I do? "}
