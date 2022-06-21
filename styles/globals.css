@@ -51,7 +51,7 @@ button {
 
 @layer components {
   .content-container {
-    @apply flex flex-col lg:px-[25vw] md:px-[20vw] px-[25px] justify-center gap-6;
+    @apply flex flex-col xl:px-[20vw] lg:px-[20vw] md:px-[20vw] px-[25px] justify-center gap-6;
   }
 
   .character {

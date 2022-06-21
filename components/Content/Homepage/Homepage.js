@@ -34,7 +34,7 @@ const Homepage = () => {
   let name = "Julien Lopez";
 
   return (
-    <div className="flex xl:flex-row flex-col pt-[20vh] xl:pt-0 lg:px-[25vw] md:px-[20vw] px-[25px] justify-center align-center min-h-[100vh]">
+    <div className="flex xl:flex-row flex-col pt-[20vh] xl:pt-0 xl:px-[25vw] px-[25px] justify-center align-center min-h-[100vh]">
       <motion.section
         id="Home"
         className="flex flex-col gap-6 align-center justify-center"
@@ -81,7 +81,7 @@ const Homepage = () => {
           </span>
         </motion.p>
       </motion.section>
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center lg:w-[200px]">
         <SvgPortrait />
       </div>
     </div>

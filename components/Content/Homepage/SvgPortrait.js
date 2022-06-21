@@ -181,7 +181,7 @@ const SvgPortrait = () => {
 
   return (
     <svg
-      className="svg-me min-h-[100%] max-w-[70vw] mt-10 "
+      className="svg-me min-h-[100%] max-w-[70vw] lg:max-w-[350px] mt-10 "
       width="396"
       height="460"
       viewBox="0 0 496 560"
