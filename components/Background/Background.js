@@ -6,7 +6,7 @@ import { distance, getRandomColor, getVelocity } from "./util";
 const Background = () => {
   let CANVAS_WIDTH = window.innerWidth;
   let CANVAS_HEIGHT = window.innerHeight;
-  let sq200Pixels = (CANVAS_HEIGHT * CANVAS_WIDTH) / 200;
+  let sq200Pixels = (CANVAS_HEIGHT * CANVAS_WIDTH) / 100;
   let STAR_COUNT = Math.floor(sq200Pixels / 100); // Number of stars
   let stars = [];
   let FPS = 60;
@@ -50,7 +50,7 @@ const Background = () => {
   const handleResize = (p5) => {
     CANVAS_HEIGHT = window.innerHeight;
     CANVAS_WIDTH = window.innerWidth;
-    sq200Pixels = (CANVAS_HEIGHT * CANVAS_WIDTH) / 200;
+    sq200Pixels = (CANVAS_HEIGHT * CANVAS_WIDTH) / 250;
     STAR_COUNT = Math.floor(sq200Pixels / 100);
     p5.resizeCanvas(window.innerWidth, window.innerHeight, true);
     stars = [];
@@ -69,7 +69,7 @@ const Background = () => {
   };
 
   const draw = (p5) => {
-    p5.background("#010d1d");
+    p5.clear();
     p5.noStroke();
 
     for (let i = 0; i < STAR_COUNT; i++) {
@@ -94,15 +94,15 @@ const Background = () => {
       return { x: aX, y: aY }; // gives us the coordinates on circle
     };
 
-    stars.forEach((s) => {
+    stars?.forEach((s) => {
       s.x += s.vx / FPS;
       s.y += s.vy / FPS;
 
       // if mouse is close, push it towards the nearest point on circle
 
       if (distance(mouse, s) < 150) {
-        s.x += (getClosestPointOnCircle(mouse, s, 150).x - s.x) / 150;
-        s.y += (getClosestPointOnCircle(mouse, s, 150).y - s.y) / 150;
+        s.x += (getClosestPointOnCircle(mouse, s, 150).x - s.x) / 190;
+        s.y += (getClosestPointOnCircle(mouse, s, 150).y - s.y) / 190;
       }
 
       if (s.opacity > 255)
@@ -110,8 +110,8 @@ const Background = () => {
         s.twinkle = "decrease";
       if (s.opacity <= 10) s.twinkle = "increase";
 
-      if (s.twinkle === "increase") s.opacity += 1;
-      if (s.twinkle === "decrease") s.opacity -= 1;
+      if (s.twinkle === "increase") s.opacity += 2;
+      if (s.twinkle === "decrease") s.opacity -= 2;
 
       if (s.x < 0 || s.x > CANVAS_WIDTH) s.vx = -s.vx;
       if (s.y < 0 || s.y > CANVAS_HEIGHT) s.vy = -s.vy;
@@ -121,14 +121,13 @@ const Background = () => {
   return (
     <>
       <Sketch
-        className={
-          "canvas fixed top-0 left-0 z-[-1] before:w-screen before:h-screen before:bg-gradient-to-b from-[rgb(0,4,17)] to-[rgb(1,23,53)] via-[rgb(1,18,53)] before:absolute before:mix-blend-lighten"
-        }
+        className={"canvas fixed top-0 left-0 "}
         mouseMoved={mouseMoved}
         setup={setup}
         draw={draw}
         windowResized={handleResize}
       />
+      <div className="fixed w-screen h-screen z-[-1] top-0 left-0  bg-gradient-to-b from-[rgb(0,6,23)] to-[rgb(1,18,53)]"></div>
     </>
   );
 };

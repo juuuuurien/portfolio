@@ -1,6 +1,6 @@
 export const getVelocity = (radius) => {
-  if (radius < 0.5) return Math.floor(Math.random() * 1) - 0.5;
-  return Math.floor(Math.random() * 5) - 2.5;
+  if (radius < 0.5) return Math.floor(Math.random() * 1) - 0.2;
+  return Math.floor(Math.random() * 8) - 4.5;
 };
 
 export const distance = (point1, point2) => {
@@ -18,6 +18,6 @@ export const distance = (point1, point2) => {
 
 export const getRandomColor = () => {
   const max = 123;
-  const min = 50;
+  const min = 100;
   return Math.floor(Math.random() * (max - min + 1) + min);
 };

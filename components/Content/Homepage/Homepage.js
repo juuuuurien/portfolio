@@ -62,7 +62,7 @@ const Homepage = () => {
           ))}
           ,
         </motion.h1>
-        <motion.h2 className="subheading" variants={children}>
+        <motion.h2 className="subheading font-light" variants={children}>
           Front end web developer.
         </motion.h2>
         <motion.p variants={children} className="max-w-lg">

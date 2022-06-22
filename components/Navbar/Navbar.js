@@ -1,11 +1,15 @@
 import { motion, useAnimation } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 import React, { useEffect, useState } from "react";
+
+import Logo from "../../public/assets/jl-logo.svg";
 
 const NavItem = ({ children }) => {
   return (
     <motion.li
+      className="font-bold"
       whileHover={{
         y: -5,
         transition: { duration: 0.1 },
@@ -65,9 +69,11 @@ const Navbar = ({ page, setPage, style }) => {
     <motion.div
       animate={navY}
       style={style}
-      className="flex fixed w-screen px-[10vw] pb-8 pt-4 items-center justify-between bg-[#020711c1]"
+      className="flex fixed w-screen px-[10vw] pb-8 pt-4 items-center justify-between"
     >
-      <h4 className="mx-10">Logo</h4>
+      <div className="h-[30px]">
+        <Image src={Logo} width="80" height="80" />
+      </div>
       <nav>
         <ul className="flex  flex-row w-full justify-evenly gap-10">
           <NavItem>
