@@ -1,13 +1,25 @@
-import React from "react";
+import React, { useRef, useState, useEffect } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import SvgPortrait from "./SvgPortrait";
 import Image from "next/image";
 import Portrait from "../../../public/assets/portrait.svg";
 
-const Homepage = () => {
+const Homepage = ({ setNavHighlight, navHighlight }) => {
   const children = {
     hidden: { y: -10, opacity: 0 },
     shown: { y: 0, x: 0, opacity: 1 },
+  };
+
+  const svgVariants = {
+    hidden: { y: -10, opacity: 0 },
+    shown: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        delay: 1,
+      },
+    },
   };
 
   const container = {
@@ -17,8 +29,10 @@ const Homepage = () => {
       opacity: 1,
       rotate: 0,
       transition: {
+        delay: 0.75,
+        delayChildren: 0.75,
         ease: "easeOut",
-        staggerChildren: 0.25,
+        staggerChildren: 0.2,
       },
     },
     exit: {
@@ -41,8 +55,8 @@ const Homepage = () => {
         variants={container}
         initial="hidden"
         whileInView={"shown"}
-        exit="exit"
         viewport={{ once: true }}
+        exit="exit"
       >
         <motion.h5 className="font-normal font-mono" variants={children}>
           Hi, my name is
@@ -81,9 +95,14 @@ const Homepage = () => {
           </span>
         </motion.p>
       </motion.section>
-      <div className="flex flex-col items-center justify-center lg:w-[200px]">
+      <motion.div
+        variants={svgVariants}
+        initial="hidden"
+        animate="shown"
+        className="flex flex-col items-center justify-center lg:w-[200px]"
+      >
         <SvgPortrait />
-      </div>
+      </motion.div>
     </div>
   );
 };

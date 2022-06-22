@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-black text-[#498fd5] text-lg m-0 p-0 font-sans overflow-x-hidden ;
+    @apply bg-black text-[#498fd5] text-lg m-0 p-0 font-sans overflow-x-hidden;
   }
 
   h1,
@@ -41,17 +41,17 @@
   }
 
   li {
-    @apply cursor-pointer
+    @apply cursor-pointer;
   }
-}
 
-button {
-  @apply px-6 py-2 mx-2 rounded-lg font-bold text-white bg-gradient-to-b from-[#7ebfed] to-[#2c62be] shadow-md shadow-blue-700/50 hover:translate-y-[-8px] transition-all;
+  button {
+    @apply px-6 py-2 mx-2 rounded-lg font-bold text-white bg-gradient-to-b from-[#7ebfed] to-[#2c62be] shadow-md shadow-blue-700/50 hover:translate-y-[-8px] transition-all;
+  }
 }
 
 @layer components {
   .content-container {
-    @apply flex flex-col xl:px-[20vw] lg:px-[20vw] md:px-[20vw] px-[25px] justify-center gap-6;
+    @apply flex flex-col px-[auto] justify-center gap-6;
   }
 
   .character {
@@ -69,6 +69,10 @@ button {
   .section-heading {
     text-shadow: 0px 5px 18px #2c62be;
     @apply text-white;
+  }
+
+  .nav-item {
+    @apply font-light text-white translate-y-[-8px] transition-all;
   }
 
   .right {

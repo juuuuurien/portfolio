@@ -11,6 +11,11 @@ const Background = () => {
   let stars = [];
   let FPS = 60;
 
+  const checkForLargeViewport = () => {
+    if (window.innerWidth > 2400 || window.innerHeight > 1080) return true;
+    return false;
+  };
+
   const initializeStars = () => {
     for (let i = 0; i < STAR_COUNT; i++) {
       // this initializes array with new Star objects.
@@ -58,6 +63,8 @@ const Background = () => {
   };
 
   const mouseMoved = (p5, mousemove) => {
+    if (checkForLargeViewport()) return;
+
     mouse.x = mousemove.clientX;
     mouse.y = mousemove.clientY;
   };
@@ -95,8 +102,10 @@ const Background = () => {
     };
 
     stars?.forEach((s) => {
-      s.x += s.vx / FPS;
-      s.y += s.vy / FPS;
+      if (!checkForLargeViewport()) {
+        s.x += s.vx / FPS;
+        s.y += s.vy / FPS;
+      }
 
       // if mouse is close, push it towards the nearest point on circle
 
@@ -121,13 +130,13 @@ const Background = () => {
   return (
     <>
       <Sketch
-        className={"canvas fixed top-0 left-0 "}
+        className={"canvas fixed top-0 left-0 z-[-1] "}
         mouseMoved={mouseMoved}
         setup={setup}
         draw={draw}
         windowResized={handleResize}
       />
-      <div className="fixed w-screen h-screen z-[-1] top-0 left-0  bg-gradient-to-b from-[rgb(0,6,23)] to-[rgb(1,18,53)]"></div>
+      <div className="fixed w-screen h-screen z-[-2] top-0 left-0  bg-gradient-to-b from-[rgb(0,6,23)] to-[rgb(1,18,53)]"></div>
     </>
   );
 };

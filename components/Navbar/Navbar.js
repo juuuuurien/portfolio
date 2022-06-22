@@ -1,4 +1,9 @@
-import { motion, useAnimation } from "framer-motion";
+import {
+  AnimateSharedLayout,
+  motion,
+  useAnimation,
+  useViewportScroll,
+} from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -6,87 +11,86 @@ import React, { useEffect, useState } from "react";
 
 import Logo from "../../public/assets/jl-logo.svg";
 
-const NavItem = ({ children }) => {
-  return (
-    <motion.li
-      className="font-bold"
-      whileHover={{
-        y: -5,
-        transition: { duration: 0.1 },
-      }}
-    >
-      {children}
-    </motion.li>
-  );
-};
-
-const Navbar = ({ page, setPage, style }) => {
+const Navbar = () => {
+  const [navHighlight, setNavHighlight] = useState("Home");
   const [navHidden, setNavHidden] = useState(false);
 
+  const { scrollY } = useViewportScroll();
+
+  const navItems = ["Home", "About", "Experience", "Contact"];
+
   // handle navigation and scroll animation
-  let scrollTop = 0;
-
-  const navY = useAnimation();
-
-  const handleScroll = () => {
-    let currentTop = window.pageYOffset || document.documentElement.scrollTop;
-    if (currentTop > scrollTop) {
-      // if scrolling down
-      if (currentTop > scrollTop + 50) setNavHidden(true);
-    } else {
-      // if scrolling up
+  const updateNavBar = () => {
+    if (scrollY?.current < scrollY?.prev) {
       setNavHidden(false);
+    } else if (scrollY?.current > 100 && scrollY?.current > scrollY?.prev) {
+      setNavHidden(true);
     }
-
-    scrollTop = currentTop <= 0 ? 0 : currentTop;
   };
 
   useEffect(() => {
-    console.log(navHidden);
-    if (navHidden) {
-      console.log("hide");
-
-      navY.start({
-        y: -90,
-      });
-    }
-
-    if (!navHidden) {
-      console.log("show");
-      navY.start({
-        y: 0,
-      });
-    }
-  }, [navHidden]);
-
-  useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
-
-    return () => window.removeEventListener("scroll", handleScroll);
+    return scrollY.onChange(() => updateNavBar());
   }, []);
+
+  // framer motion variants
+  const children = {
+    hidden: { y: -5, opacity: 0 },
+    shown: { y: 0, x: 0, opacity: 1 },
+    hover: { y: -10 },
+  };
+
+  const container = {
+    hidden: { y: -80, opacity: 0 },
+    shown: {
+      y: 0,
+      opacity: 1,
+      transition: {
+        ease: "easeOut",
+        staggerChildren: 0.15,
+      },
+    },
+  };
 
   return (
     <motion.div
-      animate={navY}
-      style={style}
-      className="flex fixed w-screen px-[10vw] pb-8 pt-4 items-center justify-between"
+      variants={container}
+      animate={navHidden ? "hidden" : "shown"}
+      initial="hidden"
+      className="flex fixed w-screen px-[15vw] pb-4 pt-4 items-center gap-20 z-[100] bg-[#00000033] "
     >
-      <div className="h-[30px]">
-        <Image src={Logo} width="80" height="80" />
-      </div>
-      <nav>
-        <ul className="flex  flex-row w-full justify-evenly gap-10">
-          <NavItem>
-            <a href="#Home">Home</a>
-          </NavItem>
-          <NavItem>
-            <a href="#About">About me</a>
-          </NavItem>
-          <NavItem>
-            <a href="#Experience">Experience</a>
-          </NavItem>
-        </ul>
-      </nav>
+      <motion.div
+        variants={children}
+        animate="shown"
+        whileHover="hover"
+        className="h-[100%]"
+      >
+        <Image src={Logo} className="cursor-pointer" objectFit="contain" />
+      </motion.div>
+      <motion.nav>
+        <AnimateSharedLayout>
+          <motion.ul className="flex flex-row w-full justify-evenly gap-10">
+            {navItems.map((item) => {
+              const isSelected = navHighlight === item;
+              return (
+                <motion.div key={item} variants={children}>
+                  <motion.li
+                    className="nav-item hover:translate-y-[-5px] translate-y-0 "
+                    onClick={() => setNavHighlight(item)}
+                  >
+                    <a href={`#${item}`}>{item}</a>
+                  </motion.li>
+                  {isSelected && (
+                    <motion.div
+                      layoutId="underline"
+                      className="h-[2px] bg-white w-[100%] "
+                    ></motion.div>
+                  )}
+                </motion.div>
+              );
+            })}
+          </motion.ul>
+        </AnimateSharedLayout>
+      </motion.nav>
     </motion.div>
   );
 };

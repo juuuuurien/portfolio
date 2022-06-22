@@ -1,4 +1,5 @@
 import gsap from "gsap";
+
 import Image from "next/image";
 import React, { useEffect, useLayoutEffect, useRef, useState } from "react";
 
@@ -135,7 +136,7 @@ const SvgPortrait = () => {
 
   // handle window resize
   const handleResize = () => {
-    blink.pause(0);
+    blink.pause();
     const svgPos = document.querySelector(".svg-me").getBoundingClientRect();
     centerRef.current = {
       x: svgPos.x + svgPos.width / 2,
@@ -168,12 +169,12 @@ const SvgPortrait = () => {
     // start animations
     if (centerRef.current) {
       gsap.ticker.add(animateFace);
-      console.log("blinking");
       blink.play();
     }
 
     // remove listener
     return () => {
+      gsap.ticker.remove(animateFace);
       window.removeEventListener("mousemove", updateScreenCoords);
       window.removeEventListener("resize", handleResize);
     };

@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import ModSquad from "../../../public/assets/modsquad.svg";
 
-const About = () => {
+const About = ({ setNavHighlight }) => {
   const children = {
     hidden: { y: -10, x: -20, opacity: 0 },
     shown: { y: 0, x: 0, opacity: 1 },
@@ -37,12 +37,12 @@ const About = () => {
       initial="hidden"
       whileInView={"shown"}
       exit="exit"
-      className="content-container py-[10vh] pb-[20vh]"
+      className="mx-auto py-[12rem] lg:max-w-[45%] max-w-[80%] "
       viewport={{ once: true, amount: 0.5 }}
     >
       <motion.h3
         variants={children}
-        className="section-heading mb-10 after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-5px] after:ml-4 "
+        className="section-heading mb-10 after:h-[1px] after:w-[10rem] after:bg-white after:inline-block after:relative after:top-[-5px] after:ml-4 "
       >
         About me
       </motion.h3>

@@ -9,7 +9,7 @@ const containerVariants = {
 
 const imageVariants = {
   hidden: {
-    x: "-10rem",
+    x: "-5rem",
     opacity: 0,
   },
   shown: {
@@ -24,7 +24,7 @@ const imageVariants = {
 
 const descriptionVariants = {
   hidden: {
-    x: "10rem",
+    x: "5rem",
     opacity: 0,
   },
   shown: {
@@ -37,7 +37,7 @@ const descriptionVariants = {
   },
 };
 
-const Experience = () => {
+const Experience = ({ setNavHighlight }) => {
   return (
     <motion.section
       id="Experience"
