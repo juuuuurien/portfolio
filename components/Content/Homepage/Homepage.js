@@ -3,6 +3,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import SvgPortrait from "./SvgPortrait";
 import Image from "next/image";
 import Portrait from "../../../public/assets/portrait.svg";
+import ToolBubble from "../../ToolBubble/ToolBubble";
 
 const Homepage = ({ setNavHighlight, navHighlight }) => {
   const children = {

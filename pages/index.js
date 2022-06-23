@@ -8,6 +8,7 @@ import Navbar from "../components/Navbar/Navbar";
 import Homepage from "../components/Content/Homepage/Homepage";
 import About from "../components/Content/About/About";
 import Experience from "../components/Content/Experience/Experience";
+import ToolBubble from "../components/ToolBubble/ToolBubble";
 
 import { motion, useAnimation, useMotionValue } from "framer-motion";
 import { AnimatePresence } from "framer-motion";

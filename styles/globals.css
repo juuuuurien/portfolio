@@ -82,4 +82,17 @@
   .left {
     text-align: left;
   }
+
+  .tooltip::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: -0.5rem;
+    left: 0.5em;
+    border: 0.75rem solid transparent;
+    border-bottom: none;
+    border-top-color: #fff;
+    filter: drop-shadow(0 0.0625rem -0.0625rem rgba(0, 0, 0, 0.1));
+  }
 }
