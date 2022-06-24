@@ -9,8 +9,8 @@ const MenuButton = ({ toggle, navOpen }) => {
       onClick={toggle}
       className="absolute bg-white w-[45px] h-[45px] left-[-45px] p-2 rounded-l-lg top-4 bg-[#000000e7]"
     >
-      {!navOpen && <AiOutlineMenu className="h-[100%] w-[100%]" />}
-      {navOpen && <AiOutlineClose className="h-[100%] w-[100%]" />}
+      {!navOpen && <AiOutlineMenu className="h-[100%] w-[100%] text-white" />}
+      {navOpen && <AiOutlineClose className="h-[100%] w-[100%] text-white" />}
     </motion.div>
   );
 };

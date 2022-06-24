@@ -178,7 +178,7 @@ const SvgPortrait = () => {
       window.removeEventListener("mousemove", updateScreenCoords);
       window.removeEventListener("resize", handleResize);
     };
-  });
+  }, [center]);
 
   return (
     <svg

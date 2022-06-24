@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Project from "./Project";
 
 const containerVariants = {
-  hidden: { y: -30, opacity: 0 },
+  hidden: { y: 20, opacity: 0 },
   shown: { y: 0, opacity: 1 },
 };
 
@@ -54,7 +54,7 @@ const Experience = ({ setNavHighlight }) => {
           variants={containerVariants}
           initial="hidden"
           animate="shown"
-          className="section-heading mb-10 self-start after:h-[1px] after:w-[300px] after:bg-white after:inline-block after:relative after:top-[-8px] after:ml-4 "
+          className="section-heading mb-10 self-start"
         >
           {"Things I'm Proud Of"}
         </motion.h3>

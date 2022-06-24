@@ -7,24 +7,25 @@ import ToolBubble from "../../ToolBubble/ToolBubble";
 
 const Homepage = ({ setNavHighlight, navHighlight }) => {
   const children = {
-    hidden: { y: -10, opacity: 0 },
+    hidden: { y: 10, opacity: 0 },
     shown: { y: 0, x: 0, opacity: 1 },
   };
 
   const svgVariants = {
-    hidden: { y: -10, opacity: 0 },
+    hidden: { x: 40, opacity: 0 },
     shown: {
       y: 0,
       x: 0,
       opacity: 1,
       transition: {
+        duration: 0.4,
         delay: 1,
       },
     },
   };
 
   const container = {
-    hidden: { y: -10, opacity: 0, rotate: -10 },
+    hidden: { y: 10, opacity: 0, rotate: -10 },
     shown: {
       y: 0,
       opacity: 1,
@@ -37,7 +38,7 @@ const Homepage = ({ setNavHighlight, navHighlight }) => {
       },
     },
     exit: {
-      y: -10,
+      y: 10,
       opacity: 0,
       transition: {
         duration: 0.3,
@@ -49,7 +50,7 @@ const Homepage = ({ setNavHighlight, navHighlight }) => {
   let name = "Julien Lopez";
 
   return (
-    <div className="flex xl:flex-row flex-col pt-[20vh] xl:pt-0 xl:px-[25vw] px-[25px] justify-center align-center min-h-[100vh]">
+    <div className="flex lg:flex-row flex-col pt-[20vh] xl:pt-0 xl:px-[25vw] px-[25px] justify-center align-center min-h-[100vh]">
       <motion.section
         id="Home"
         className="flex flex-col gap-6 align-center justify-center"
@@ -80,7 +81,7 @@ const Homepage = ({ setNavHighlight, navHighlight }) => {
         <motion.h2 className="subheading font-light" variants={children}>
           Front end web developer.
         </motion.h2>
-        <motion.p variants={children} className="max-w-lg">
+        <motion.p variants={children} className="max-w-lg  ">
           I am a <strong className="text-yellow-300">Fi</strong>
           <strong className=" text-blue-500">li</strong>
           <strong className="text-red-500">pi</strong>
@@ -90,10 +91,9 @@ const Homepage = ({ setNavHighlight, navHighlight }) => {
           experiences!
         </motion.p>
         <motion.p variants={children}>
-          {"Like what I do? "}
-          <span>
-            <button>Contact me!</button>
-          </span>
+          <a href="mailto:Julien24Lopez@gmail.com">
+            <button>Hire me!</button>
+          </a>
         </motion.p>
       </motion.section>
       <motion.div

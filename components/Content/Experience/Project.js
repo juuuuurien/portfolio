@@ -33,33 +33,33 @@ const Project = ({
           y: -10,
           transition: { duration: 0.2 },
         }}
-        className={`${imgPos} relative  lg:row-start-1 lg:row-end-2 md:row-start-1 md:row-end-4 xs:row-start-3 xs:row-end-6 z-0 shadow-md`}
+        className={`${imgPos} relative  lg:row-start-1 lg:row-end-2 row-start-1 row-end-6 z-0 shadow-md`}
       >
         <a className="group" href={href} target="_new">
-          <img className="rounded-md z-0 h-[100%]  w-[100%]" src={hoverSrc} />
+          <img className="rounded-md z-0   w-[100%]" src={hoverSrc} />
           <img
-            className="rounded-md top-[0] h-[100%] w-[100%] z-10 brightness-50 absolute group-hover:opacity-0 transition-all duration-500 before"
+            className="rounded-md top-[0]  w-[100%] z-10 brightness-50 absolute group-hover:opacity-0 transition-all duration-500 before"
             src={src}
           />
-          <div className="absolute rounded-md bg-[#030c18] mix-blend-screen top-0 z-[100] w-[100%] h-[100%] group-hover:opacity-0 transition-all " />
+          <div className="absolute rounded-md bg-[#030c18] mix-blend-screen top-0 z-[100] w-[100%] group-hover:opacity-0 transition-all " />
         </a>
       </motion.div>
       <motion.div
         variants={descriptionVariants}
-        className={`${descPos} lg:row-start-1 lg:row-end-2 md:row-start-3 md:row-end-6 xs:row-start-1  xs:row-end-3 self-center z-10 ${align}`}
+        className={`${descPos} lg:bg-transparent bg-[#022a68aa] p-5 rounded-md lg:row-start-1 lg:row-end-2 row-start-3 row-end-7 self-center z-10 ${align}`}
       >
-        <h4 className="my-4 lg:px-0 px-6">{title}</h4>
-        <div className="p-6 rounded-xl lg:rounded-sm bg-[#022a68]">
+        <h4 className="lg:px-0 px-6 text-white">{title}</h4>
+        <div className="p-6 my-4 rounded-xl lg:rounded-sm lg:bg-[#022a68]">
           {description}
         </div>
-        <div className="p-3 rounded-xl my-4 lg:rounded-sm ">
+        <div className="flex justify-center">
           <ul
-            className={`flex flex-row ${
+            className={`flex flex-row flex-wrap ${
               align === "right" ? "justify-end" : "justify-start"
-            } gap-5 font-mono`}
+            } md:gap-5 gap-5 font-mono`}
           >
             {tools?.map((tool, i) => (
-              <li className="text-sm" key={i}>
+              <li className="text-sm text-[#CA9F0D]" key={i}>
                 {tool}
               </li>
             ))}

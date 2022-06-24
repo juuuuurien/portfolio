@@ -64,15 +64,10 @@ const Navbar = () => {
       variants={container}
       animate={[navHidden ? "hidden" : "shown", navOpen ? "open" : "closed"]}
       initial="hidden"
-      className="p-10 px-20 rounded-l-xl left-[100%] md:left-0 fixed flex flex-col md:flex-row md:w-screen md:px-[15vw] lg:pb-4 lg:pt-4 items-center gap-20 z-[100] md:bg-[#00000033] bg-[#000000e7]"
+      className=" fixed flex flex-col p-10 px-20 h-[100%] md:h-fit rounded-l-xl left-[100%] md:left-0 md:flex-row md:justify-between md:w-screen md:px-[20vw] lg:pb-4 lg:pt-4 items-center gap-20 z-[100] md:bg-[#00000033] bg-[#000000e7]"
     >
       <MenuButton navOpen={navOpen} toggle={() => toggleNav()} />
-      <motion.div
-        variants={children}
-        animate="shown"
-        whileHover="hover"
-        className="h-[100%]"
-      >
+      <motion.div variants={children} animate="shown" whileHover="hover">
         <Image src={Logo} className="cursor-pointer" objectFit="contain" />
       </motion.div>
       <motion.nav>
