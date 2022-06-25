@@ -4,6 +4,7 @@ import SvgPortrait from "./SvgPortrait";
 import Image from "next/image";
 import Portrait from "../../../public/assets/portrait.svg";
 import ToolBubble from "../../ToolBubble/ToolBubble";
+import SvgBackground from "./SvgBackground";
 
 const Homepage = ({ setNavHighlight, navHighlight }) => {
   const children = {
@@ -103,6 +104,7 @@ const Homepage = ({ setNavHighlight, navHighlight }) => {
         className="flex flex-col items-center justify-center lg:w-[200px]"
       >
         <SvgPortrait />
+        <SvgBackground />
       </motion.div>
     </div>
   );
