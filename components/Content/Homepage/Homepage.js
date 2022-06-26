@@ -1,12 +1,8 @@
-import React, { useRef, useState, useEffect } from "react";
-import { AnimatePresence, motion } from "framer-motion";
+import React from "react";
+import { motion } from "framer-motion";
 import SvgPortrait from "./SvgPortrait";
-import Image from "next/image";
-import Portrait from "../../../public/assets/portrait.svg";
-import ToolBubble from "../../ToolBubble/ToolBubble";
-import SvgBackground from "./SvgBackground";
 
-const Homepage = ({ setNavHighlight, navHighlight }) => {
+const Homepage = () => {
   const children = {
     hidden: { y: 10, opacity: 0 },
     shown: { y: 0, x: 0, opacity: 1 },
@@ -101,10 +97,9 @@ const Homepage = ({ setNavHighlight, navHighlight }) => {
         variants={svgVariants}
         initial="hidden"
         animate="shown"
-        className="flex flex-col items-center justify-center lg:w-[200px]"
+        className="flex flex-col items-center justify-center lg:w-[px]"
       >
         <SvgPortrait />
-        <SvgBackground />
       </motion.div>
     </div>
   );
