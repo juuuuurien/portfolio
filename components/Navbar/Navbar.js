@@ -2,11 +2,9 @@ import React, { useEffect, useState } from "react";
 import {
   AnimateSharedLayout,
   motion,
-  useAnimation,
   useCycle,
   useViewportScroll,
 } from "framer-motion";
-import Link from "next/link";
 import Image from "next/image";
 
 import Logo from "../../public/assets/jl-logo.svg";
@@ -19,7 +17,7 @@ const Navbar = () => {
 
   const { scrollY } = useViewportScroll();
 
-  const navItems = ["Home", "About", "Experience", "Contact"];
+  const navItems = ["Home", "About", "My Work", "Contact"];
 
   // handle navigation and scroll animation
   const updateNavBar = () => {
@@ -64,7 +62,7 @@ const Navbar = () => {
       variants={container}
       animate={[navHidden ? "hidden" : "shown", navOpen ? "open" : "closed"]}
       initial="hidden"
-      className=" fixed flex flex-col p-10 px-20 h-[100%] md:h-fit rounded-l-xl left-[100%] md:left-0 md:flex-row md:justify-between md:w-screen md:px-[20vw] lg:pb-4 lg:pt-4 items-center gap-20 z-[100] md:bg-[#00000033] bg-[#000000e7]"
+      className=" fixed flex flex-col p-10 px-20 h-[100%] md:h-fit rounded-l-xl left-[100%] md:left-0 md:flex-row md:justify-between md:w-screen md:px-[15vw] lg:pb-4 lg:pt-6 items-center gap-20 z-[100] md:bg-[#00000033] bg-[#000000e7]"
     >
       <MenuButton navOpen={navOpen} toggle={() => toggleNav()} />
       <motion.div variants={children} animate="shown" whileHover="hover">

@@ -14,6 +14,7 @@ import { motion } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
 import ThreeDots from "../public/assets/three-dots.svg";
+import Contact from "../components/Content/Contact/Contact";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
@@ -31,11 +32,7 @@ export default function Home() {
   }, []);
 
   return (
-    <div
-      onScroll={() => {
-        console.log("scrolling");
-      }}
-    >
+    <div>
       <Head>
         <title>Julien - Web Developer</title>
         <meta
@@ -85,6 +82,7 @@ export default function Home() {
             <Homepage />
             <About />
             <Experience />
+            <Contact />
           </motion.div>
         )}
       </AnimatePresence>

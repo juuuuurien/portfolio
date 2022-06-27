@@ -80,10 +80,11 @@ const About = ({ setNavHighlight }) => {
         Other than coding, I like to travel, paint, cook, and eat!
       </motion.p>
       <motion.div
+        // fix here for animation in
         className="flex flex-col justify-center items-center mt-20 gap-10"
         variants={children}
       >
-        Check out my socials
+        Check out my socials!
         <div className="flex flex-row gap-3">
           <motion.div whileHover={{ y: -10 }}>
             <a href="https://github.com/juuuuurien">

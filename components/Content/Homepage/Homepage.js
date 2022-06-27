@@ -50,7 +50,7 @@ const Homepage = () => {
     <div className="flex lg:flex-row flex-col pt-[20vh] xl:pt-0 xl:px-[25vw] px-[25px] justify-center align-center min-h-[100vh]">
       <motion.section
         id="Home"
-        className="flex flex-col gap-6 align-center justify-center"
+        className="flex flex-col gap-6 align-center justify-center min-w-[440px]"
         variants={container}
         initial="hidden"
         whileInView={"shown"}

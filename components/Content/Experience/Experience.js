@@ -40,8 +40,8 @@ const descriptionVariants = {
 const Experience = ({ setNavHighlight }) => {
   return (
     <motion.section
-      id="Experience"
-      className="flex flex-col min-h-[100vh] lg:px-[10vw] px-2 justify-center items-center"
+      id="My Work"
+      className="flex flex-col min-h-[100vh] lg:px-[10vw] lg:py-[5vh] px-2 justify-center items-center"
     >
       <motion.div
         variants={containerVariants}
@@ -107,6 +107,30 @@ const Experience = ({ setNavHighlight }) => {
             <p>
               <strong>FlexLog</strong> is a workout tracking app I built and
               regularly use.
+            </p>
+          }
+        />
+        <Project
+          href="https://github.com/juuuuurien/portfolio"
+          align="right"
+          imageVariants={imageVariants}
+          descriptionVariants={descriptionVariants}
+          src={"/assets/portfolio-display.png"}
+          tools={["NextJS", "React", "Framer Motion", "TailwindCSS", "Figma"]}
+          title={
+            <>
+              Web Portfolio -
+              <span className="font-normal text-lg">
+                {" Resume and Experience"}
+              </span>
+            </>
+          }
+          hoverSrc={"/assets/portfolio-display.png"}
+          description={
+            <p>
+              <strong>Julien's Portfolio</strong> is a web resume built using
+              NextJS as its React framework, Framer Motion as its animation
+              scaffold, and Tailwind as its CSS framework.
             </p>
           }
         />
