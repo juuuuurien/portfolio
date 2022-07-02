@@ -9,7 +9,7 @@ const containerVariants = {
 
 const imageVariants = {
   hidden: {
-    x: "-5rem",
+    x: "-10vw",
     opacity: 0,
   },
   shown: {
@@ -24,7 +24,7 @@ const imageVariants = {
 
 const descriptionVariants = {
   hidden: {
-    x: "5rem",
+    x: "10vw",
     opacity: 0,
   },
   shown: {
@@ -37,18 +37,18 @@ const descriptionVariants = {
   },
 };
 
-const Experience = ({ setNavHighlight }) => {
+const Experience = () => {
   return (
     <motion.section
       id="My Work"
-      className="flex flex-col min-h-[100vh] lg:px-[10vw] lg:py-[5vh] px-2 justify-center items-center"
+      className="flex flex-col lg:px-[10vw] lg:py-[5vh] px-2 justify-center items-center "
+      initial="hidden"
+      viewport={{ once: true, amount: 0.1 }}
+      whileInView="shown"
     >
       <motion.div
         variants={containerVariants}
-        initial="hidden"
-        whileInView="shown"
         className="flex flex-col items-center lg:max-w-[55vw] max-w-[80vw] gap-10"
-        viewport={{ once: true, amount: 0.5 }}
       >
         <motion.h3
           variants={containerVariants}
@@ -128,9 +128,9 @@ const Experience = ({ setNavHighlight }) => {
           hoverSrc={"/assets/portfolio-display.png"}
           description={
             <p>
-              <strong>Julien's Portfolio</strong> is a web resume built using
-              NextJS as its React framework, Framer Motion as its animation
-              scaffold, and Tailwind as its CSS framework.
+              <strong>{"Julien's Portfolio"}</strong> is a web resume built
+              using NextJS as its React framework, Framer Motion as its
+              animation scaffold, and Tailwind as its CSS framework.
             </p>
           }
         />

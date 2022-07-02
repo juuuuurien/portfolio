@@ -12,12 +12,12 @@ const Contact = () => {
         {"Contact Me"}
       </motion.h2>
       <p className=" py-10 px-10 lg:max-w-[33%] rounded-md">
-        I am currently looking for all kinds of work. If you want to work
-        together, have any questions, or simply want to say hi, please reach out
-        and I'll get back to you as soon as I can!
+        {
+          " I am currently looking for all kinds of work! If you want to work together, have any questions, or simply want to say hi, please reach out and I'll get back to you as soon as I can!"
+        }
       </p>
       <a href="mailto:Julien24Lopez@gmail.com">
-        <button>Say Hello</button>
+        <button>Say Hello!</button>
       </a>
     </section>
   );

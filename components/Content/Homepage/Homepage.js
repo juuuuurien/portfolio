@@ -50,7 +50,7 @@ const Homepage = () => {
     <div className="flex lg:flex-row flex-col pt-[20vh] xl:pt-0 xl:px-[25vw] px-[25px] justify-center align-center min-h-[100vh]">
       <motion.section
         id="Home"
-        className="flex flex-col gap-6 align-center justify-center min-w-[440px]"
+        className="flex flex-col gap-6 align-center justify-center lg:min-w-[440px]"
         variants={container}
         initial="hidden"
         whileInView={"shown"}
@@ -78,15 +78,9 @@ const Homepage = () => {
         <motion.h2 className="subheading font-light" variants={children}>
           Front end web developer.
         </motion.h2>
-        <motion.p variants={children} className="max-w-lg  ">
-          I am a <strong className="text-yellow-300">Fi</strong>
-          <strong className=" text-blue-500">li</strong>
-          <strong className="text-red-500">pi</strong>
-          <strong className=" text-white">no</strong>-American software engineer
-          specializing in the front end. Using modern technologies such as React
-          and React Native, I strive to make smooth, design-minded digital
-          experiences!
-        </motion.p>
+        <motion.h3 variants={children} className="max-w-lg font-normal">
+          I love creating things, especially for the web. 💻
+        </motion.h3>
         <motion.p variants={children}>
           <a href="mailto:Julien24Lopez@gmail.com">
             <button>Hire me!</button>
