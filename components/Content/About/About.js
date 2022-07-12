@@ -25,13 +25,27 @@ const About = ({ setNavHighlight }) => {
       opacity: 1,
       transition: {
         ease: "easeOut",
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
     exit: {
       opacity: 0,
       transition: {
         duration: 0.1,
+      },
+    },
+  };
+
+  const selfieVariants = {
+    hidden: {
+      x: 20,
+      opacity: 0,
+    },
+    shown: {
+      x: 0,
+      opacity: 1,
+      transition: {
+        x: { type: "spring", stiffness: 50 },
       },
     },
   };
@@ -45,7 +59,7 @@ const About = ({ setNavHighlight }) => {
       initial="hidden"
       whileInView={"shown"}
       exit="exit"
-      className="flex flex-col mx-auto py-[8rem] lg:max-w-[45%] max-w-[80%] gap-6"
+      className="flex flex-col mx-auto py-[5vh] lg:max-w-[45%] max-w-[80%] gap-6"
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h3 variants={children} className="section-heading mb-10 ">
@@ -89,6 +103,7 @@ const About = ({ setNavHighlight }) => {
           </motion.p>
         </div>
         <motion.div
+          variants={selfieVariants}
           whileHover={{ scale: 1.05, x: 10, y: 10 }}
           className="flex self-center rounded-[50px] border-2 border-[#498fd5]"
         >

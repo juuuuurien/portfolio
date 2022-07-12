@@ -41,7 +41,7 @@ const Experience = () => {
   return (
     <motion.section
       id="My Work"
-      className="flex flex-col lg:px-[10vw] lg:py-[5vh] px-2 justify-center items-center "
+      className="flex flex-col lg:px-[10vw] lg:pt-[5vh] px-2 justify-center items-center "
       initial="hidden"
       viewport={{ once: true, amount: 0.1 }}
       whileInView="shown"

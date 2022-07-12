@@ -16,7 +16,7 @@ const Homepage = () => {
       opacity: 1,
       transition: {
         duration: 0.4,
-        delay: 1,
+        delay: 0.5,
       },
     },
   };
@@ -28,10 +28,10 @@ const Homepage = () => {
       opacity: 1,
       rotate: 0,
       transition: {
-        delay: 0.75,
-        delayChildren: 0.75,
+        delay: 0.55,
+        delayChildren: 0.55,
         ease: "easeOut",
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
     exit: {

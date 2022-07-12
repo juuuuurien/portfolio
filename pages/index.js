@@ -34,7 +34,7 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Julien - Web Developer</title>
+        <title>Julien Lopez</title>
         <meta
           name="description"
           content="Developer portfolio created by Julien Lopez"

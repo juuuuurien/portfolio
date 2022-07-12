@@ -35,8 +35,15 @@ const Navbar = () => {
 
   // framer motion variants
   const children = {
-    hidden: { y: -5, opacity: 0 },
-    shown: { y: 0, x: 0, opacity: 1 },
+    hidden: { y: -25, opacity: 0 },
+    shown: {
+      y: 0,
+      x: 0,
+      opacity: 1,
+      transition: {
+        duration: 0.3,
+      },
+    },
     hover: { y: -10 },
   };
 
