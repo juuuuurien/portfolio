@@ -2,6 +2,9 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import ModSquad from "../../../public/assets/modsquad.svg";
+import Selfie from "../../../public/assets/selfie.png";
+import Selfie2 from "../../../public/assets/selfie2.png";
+
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -67,9 +70,8 @@ const About = ({ setNavHighlight }) => {
             <Image src={ModSquad} width="120" height="40" />
           </a>
         </motion.span>
-        {
-          ". As a Tier 2 Moderator, I work with a team of like-minded moderators to help manage, build, and protect online communities all over the world. "
-        }
+        . As a Tier 2 Moderator, I work with a team of like-minded moderators to
+        help manage, build, and protect online communities all over the world.
       </motion.p>
       <motion.p variants={children} className="text-[#CA9F0D]">
         Although my current occupation is not 100% programming, it is my dream
@@ -79,11 +81,20 @@ const About = ({ setNavHighlight }) => {
       <motion.p variants={children}>
         Other than coding, I like to travel, paint, cook, and eat!
       </motion.p>
+
       <motion.div
         // fix here for animation in
         className="flex flex-col justify-center items-center mt-20 gap-10"
         variants={children}
       >
+        <div className="flex flex-row gap-10 float-right">
+          <Image
+            src={Selfie2}
+            height={200}
+            width={200}
+            className="rounded-[100%]"
+          />
+        </div>
         Check out my socials!
         <div className="flex flex-row gap-3">
           <motion.div whileHover={{ y: -10 }}>

@@ -8,6 +8,7 @@ import {
 import Image from "next/image";
 
 import Logo from "../../public/assets/jl-logo.svg";
+
 import MenuButton from "./MenuButton";
 
 const Navbar = () => {
@@ -84,6 +85,7 @@ const Navbar = () => {
                   >
                     <a href={`#${item}`}>{item}</a>
                   </motion.li>
+                  {/* underline is just a div */}
                   {isSelected && (
                     <motion.div
                       layoutId="underline"
@@ -93,6 +95,11 @@ const Navbar = () => {
                 </motion.div>
               );
             })}
+            {/* <motion.li className="nav-item hover:translate-y-[-5px] translate-y-0 ">
+              <a href={PDF} target="_blank">
+                Resume
+              </a>
+            </motion.li> */}
           </motion.ul>
         </AnimateSharedLayout>
       </motion.nav>
