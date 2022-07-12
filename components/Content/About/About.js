@@ -19,10 +19,9 @@ const About = ({ setNavHighlight }) => {
   };
 
   const container = {
-    hidden: { y: -10, opacity: 0, rotate: -10 },
+    hidden: { y: -10, opacity: 0 },
     shown: {
       y: 0,
-      rotate: 0,
       opacity: 1,
       transition: {
         ease: "easeOut",
@@ -47,18 +46,22 @@ const About = ({ setNavHighlight }) => {
       whileInView={"shown"}
       exit="exit"
       className="flex flex-col mx-auto py-[8rem] lg:max-w-[45%] max-w-[80%] gap-6"
-      viewport={{ once: true, amount: 0.5 }}
+      viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h3 variants={children} className="section-heading mb-10 ">
         About me
       </motion.h3>
       <motion.p variants={children}>
-        My love for programming began, like many, on social media apps like
-        Tumblr and MySpace! After learning that it is possible to create
-        beautiful designs with lines of code, I was hooked.
+        I am a <strong className="text-yellow-300">Fi</strong>
+        <strong className=" text-blue-500">li</strong>
+        <strong className="text-red-500">pi</strong>
+        <strong className=" text-white">no</strong>-American software engineer
+        specializing in the front end. Using modern technologies such as React
+        and React Native, I strive to make smooth, design-minded digital
+        experiences!
       </motion.p>
       <motion.p variants={children}>
-        I am currently proudly working as a Tier 2 Moderator at{" "}
+        I am currently working as a proud member of{" "}
         <motion.span
           className="inline-block"
           whileHover={{
@@ -70,20 +73,20 @@ const About = ({ setNavHighlight }) => {
             <Image src={ModSquad} width="120" height="40" />
           </a>
         </motion.span>
-        . As a Tier 2 Moderator, I work with a team of like-minded moderators to
-        help manage, build, and protect online communities all over the world.
+        {
+          ". As a ModSquad moderator, I work with a team of like-minded moderators to help manage, build, and protect online communities all over the world. "
+        }
       </motion.p>
       <motion.p variants={children} className="text-[#CA9F0D]">
         Although my current occupation is not 100% programming, it is my dream
-        to be a developer who is passionate about programming , web design, and
-        creating new things .
+        to be a developer who is passionate about tech, web design, and creating
+        new things .
       </motion.p>
       <motion.p variants={children}>
         Other than coding, I like to travel, paint, cook, and eat!
       </motion.p>
 
       <motion.div
-        // fix here for animation in
         className="flex flex-col justify-center items-center mt-20 gap-10"
         variants={children}
       >
