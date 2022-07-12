@@ -52,7 +52,7 @@ const About = ({ setNavHighlight }) => {
         About me
       </motion.h3>
       <div className="flex flex-col md:flex-row">
-        <div>
+        <div className=" my-10 md:mx-5">
           <motion.p variants={children}>
             I am a <strong className="text-yellow-300">Fi</strong>
             <strong className=" text-blue-500">li</strong>
@@ -90,7 +90,7 @@ const About = ({ setNavHighlight }) => {
         </div>
         <motion.div
           whileHover={{ scale: 1.05, x: 10, y: 10 }}
-          className="flex self-center mx-5 rounded-[50px] border-2 border-[#498fd5]"
+          className="flex self-center rounded-[50px] border-2 border-[#498fd5]"
         >
           <Image
             src={Selfie2}
