@@ -59,6 +59,33 @@ const Experience = () => {
           {"Things I'm Proud Of"}
         </motion.h3>
         <Project
+          href="https://linkspring.me"
+          align="left"
+          imageVariants={imageVariants}
+          descriptionVariants={descriptionVariants}
+          src={"/assets/linkspring-display.png"}
+          tools={["NextJS", "MongoDB", "React-Query", "TailwindCSS", "Vercel"]}
+          title={
+            <>
+              Linkspring -
+              <span className="font-normal text-lg">
+                {
+                  " Linktr.ee inspired, free forever, link in bio tool for mobile and web"
+                }
+              </span>
+            </>
+          }
+          hoverSrc={"/assets/linkspring-display.png"}
+          description={
+            <p>
+              <strong>{"Linkspring.me"}</strong> is a web app built to connect
+              your socials, website, store, videos, music, podcast, events and
+              more. It all comes together in a <strong>link in bio</strong>{" "}
+              landing page.
+            </p>
+          }
+        />
+        <Project
           href="https://www.thockey.io/"
           align="right"
           imageVariants={imageVariants}
@@ -106,7 +133,8 @@ const Experience = () => {
           description={
             <p>
               <strong>FlexLog</strong> is a workout tracking app I built and
-              regularly use.
+              regularly use to create, log, and analyze my strength and workout
+              programs.
             </p>
           }
         />

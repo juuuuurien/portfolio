@@ -63,7 +63,7 @@ const About = ({ setNavHighlight }) => {
       viewport={{ once: true, amount: 0.2 }}
     >
       <motion.h3 variants={children} className="section-heading mb-10 ">
-        About me
+        Who I am
       </motion.h3>
       <div className="flex flex-col md:flex-row">
         <div className=" my-10 md:mx-5">
