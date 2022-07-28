@@ -25,7 +25,7 @@ const Contact = () => {
           whileHover={{ y: -10 }}
           className="flex flex-col h-fit w-fit items-center justify-center cursor-pointer"
         >
-          <span>Designed & Built by Julien Lopez</span>
+          <span>{"Copyright © Julien's Blog 2022. Made with Next.js, TailwindCSS, and ❤  by Julien Lopez"}</span>
           <AiFillGithub className="h-[25px] w-[25px]" />
         </motion.div>
       </div>
