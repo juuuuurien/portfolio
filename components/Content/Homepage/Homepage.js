@@ -5,7 +5,7 @@ import SvgPortrait from "./SvgPortrait";
 const Homepage = () => {
   const children = {
     hidden: { y: 10, opacity: 0 },
-    shown: { y: 0, x: 0, opacity: 1 },
+    shown: { y: 0, x: 0, opacity: 1 }
   };
 
   const svgVariants = {
@@ -16,9 +16,9 @@ const Homepage = () => {
       opacity: 1,
       transition: {
         duration: 0.4,
-        delay: 0.5,
-      },
-    },
+        delay: 0.5
+      }
+    }
   };
 
   const container = {
@@ -31,17 +31,17 @@ const Homepage = () => {
         delay: 0.55,
         delayChildren: 0.55,
         ease: "easeOut",
-        staggerChildren: 0.15,
-      },
+        staggerChildren: 0.15
+      }
     },
     exit: {
       y: 10,
       opacity: 0,
       transition: {
         duration: 0.3,
-        staggerChildren: 0.5,
-      },
-    },
+        staggerChildren: 0.5
+      }
+    }
   };
 
   let name = "Julien Lopez";
@@ -67,7 +67,7 @@ const Homepage = () => {
               className="inline-block character"
               whileHover={{
                 scale: 1.5,
-                transition: { duration: 0.1 },
+                transition: { duration: 0.1 }
               }}
             >
               {char}
@@ -79,7 +79,11 @@ const Homepage = () => {
           Front end web developer.
         </motion.h2>
         <motion.h3 variants={children} className="max-w-lg font-normal">
-          I love creating things, especially for the web. 💻
+          I love creating things,{" "}
+          <span className="relative inline-block after:absolute after:content-[''] after:top-[18px] after:left-[-2px] after:rotate-[-1deg] origin-bottom-left after:w-[0%] after:hover:w-[103%] after:transition-all after:duration-[600ms] after:ease-[cubic-bezier(1,-0.08, 0.2, 1)] after:h-[55%] after:opacity-[40%] after:bg-yellow-500 ">
+            especially for the web.
+          </span>{" "}
+          💻
         </motion.h3>
         <motion.p variants={children}>
           <a href="mailto:Julien24Lopez@gmail.com">
