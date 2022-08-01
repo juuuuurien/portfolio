@@ -69,9 +69,7 @@ const Experience = () => {
             <>
               Linkspring -
               <span className="font-normal text-lg">
-                {
-                  " Linktr.ee inspired, free forever, link in bio tool for mobile and web"
-                }
+                {" Fully functional link in bio tool for mobile and web"}
               </span>
             </>
           }
@@ -114,6 +112,7 @@ const Experience = () => {
           imageVariants={imageVariants}
           descriptionVariants={descriptionVariants}
           src={"/assets/flexlog-display-2.png"}
+          hoverSrc={"/assets/flexlog-display-2.png"}
           tools={[
             "React Native",
             "Reanimated 2",
@@ -129,7 +128,6 @@ const Experience = () => {
               </span>
             </>
           }
-          hoverSrc={"/assets/flexlog-display-2.png"}
           description={
             <p>
               <strong>FlexLog</strong> is a workout tracking app I built and
@@ -144,6 +142,7 @@ const Experience = () => {
           imageVariants={imageVariants}
           descriptionVariants={descriptionVariants}
           src={"/assets/portfolio-display.png"}
+          hoverSrc={"/assets/portfolio-display.png"}
           tools={["NextJS", "React", "Framer Motion", "TailwindCSS", "Figma"]}
           title={
             <>
@@ -153,7 +152,6 @@ const Experience = () => {
               </span>
             </>
           }
-          hoverSrc={"/assets/portfolio-display.png"}
           description={
             <p>
               <strong>{"Julien's Portfolio"}</strong> is a web resume built

@@ -50,7 +50,7 @@ const Project = ({
         className={`${descPos} lg:bg-transparent bg-[#022a68aa] p-5 rounded-md lg:row-start-1 lg:row-end-2 row-start-3 row-end-7 self-center z-10 ${align}`}
       >
         <a href={href} target="_new">
-          <h4 className="lg:px-0 px-6 text-white">{title}</h4>
+          <h4 className="lg:px-0 px-6 text-[#CA9F0D]">{title}</h4>
           <div className="p-6 my-4 rounded-xl lg:rounded-sm lg:bg-[#022a68]">
             {description}
           </div>
