@@ -21,6 +21,7 @@ const Homepage = () => {
     },
   };
 
+
   const container = {
     hidden: { y: 10, opacity: 0, rotate: -10 },
     shown: {
@@ -76,7 +77,7 @@ const Homepage = () => {
           ,
         </motion.h1>
         <motion.h2 className="subheading font-light" variants={children}>
-          Front end web developer.
+          Full Stack web developer.
         </motion.h2>
         <motion.h3 variants={children} className="max-w-lg font-normal">
           I love creating things,{" "}
