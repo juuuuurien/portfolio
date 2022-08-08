@@ -51,7 +51,7 @@ const Project = ({
       >
         <a href={href} target="_new">
           <h4 className="lg:px-0 px-6 text-[#CA9F0D]">{title}</h4>
-          <div className="p-6 my-4 rounded-xl lg:rounded-sm lg:bg-[#022a68]">
+          <div className="p-6 my-4 rounded-xl lg:rounded-sm lg:bg-[#022a6866]">
             {description}
           </div>
           <div className="flex justify-center">

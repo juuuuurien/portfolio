@@ -77,7 +77,7 @@ const About = ({ setNavHighlight }) => {
             design-minded digital experiences!
           </motion.p>
           <motion.p variants={children}>
-            I am currently working as a proud member of{" "}
+            I am currently working as a digital content specialist over at{" "}
             <motion.span
               className="inline-block"
               whileHover={{
@@ -90,7 +90,7 @@ const About = ({ setNavHighlight }) => {
               </a>
             </motion.span>
             {
-              ". As a ModSquad moderator, I work with a team of like-minded moderators to help manage, build, and protect online communities all over the world. "
+              ". At ModSquad, I work with a team of like-minded moderators to help manage, build, and protect online communities all over the world. "
             }
           </motion.p>
           <motion.p variants={children} className="text-[#CA9F0D]">
