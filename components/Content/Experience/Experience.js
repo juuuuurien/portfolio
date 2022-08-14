@@ -48,7 +48,7 @@ const Experience = () => {
     >
       <motion.div
         variants={containerVariants}
-        className="flex flex-col items-center lg:max-w-[55vw] max-w-[80vw] gap-10"
+        className="flex flex-col items-center lg:max-w-[72vw] max-w-[80vw] gap-10"
       >
         <motion.h3
           variants={containerVariants}

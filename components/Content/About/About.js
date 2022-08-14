@@ -59,10 +59,10 @@ const About = ({ setNavHighlight }) => {
       initial="hidden"
       whileInView={"shown"}
       exit="exit"
-      className="flex flex-col mx-auto py-[5vh] lg:max-w-[45%] max-w-[80%] gap-6"
+      className="flex flex-col mx-auto py-[5vh] lg:max-w-[55%] max-w-[80%] gap-6"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <motion.h3 variants={children} className="section-heading mb-10 ">
+      <motion.h3 variants={children} className="section-heading mb-10">
         Who I am
       </motion.h3>
       <div className="flex flex-col md:flex-row">

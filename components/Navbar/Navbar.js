@@ -11,6 +11,13 @@ import Logo from "../../public/assets/jl-logo.svg";
 
 import MenuButton from "./MenuButton";
 
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
+
 const Navbar = () => {
   const [navHighlight, setNavHighlight] = useState("Home");
   const [navHidden, setNavHidden] = useState(false);
@@ -107,6 +114,28 @@ const Navbar = () => {
                 Resume
               </a>
             </motion.li> */}
+            <div className="flex flex-row gap-3">
+              <motion.div whileHover={{ y: -5 }}>
+                <a href="https://github.com/juuuuurien">
+                  <AiFillGithub className="h-[25px] w-[25px] hover:text-[#CA9F0D] transition-all duration-[800]" />
+                </a>
+              </motion.div>
+              <motion.div whileHover={{ y: -5 }}>
+                <a href="https://www.instagram.com/juuuuurien/">
+                  <AiFillInstagram className="h-[25px] w-[25px] hover:text-[#CA9F0D] transition-all duration-[800]" />
+                </a>
+              </motion.div>
+              <motion.div whileHover={{ y: -5 }}>
+                <a href="https://twitter.com/juuuuurien">
+                  <AiFillTwitterCircle className="h-[25px] w-[25px] hover:text-[#CA9F0D] transition-all duration-[800]" />
+                </a>
+              </motion.div>
+              <motion.div whileHover={{ y: -5 }}>
+                <a href="https://www.linkedin.com/in/julien-lopez-dev/">
+                  <AiFillLinkedin className="h-[25px] w-[25px] hover:text-[#CA9F0D] transition-all duration-[800]" />
+                </a>
+              </motion.div>
+            </div>
           </motion.ul>
         </AnimateSharedLayout>
       </motion.nav>

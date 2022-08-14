@@ -38,11 +38,12 @@ const Project = ({
         <a className="group" href={href} target="_new">
           <img className="rounded-md z-0  h-full w-[100%]" src={hoverSrc} />
           <img
-            className="rounded-md top-[0]  h-full w-[100%] z-10 brightness-50 absolute group-hover:opacity-0 transition-all duration-500 before"
+            className="rounded-md top-[0] h-full w-[100%] z-10 brightness-50 absolute group-hover:opacity-0 transition-all duration-500"
             src={src}
           />
           <div className="absolute rounded-md bg-[#030c18] mix-blend-screen top-0 z-[100] w-[100%] group-hover:opacity-0 transition-all " />
         </a>
+        {/* <iframe src={href} height="400" width="7220" /> */}
       </motion.div>
 
       <motion.div

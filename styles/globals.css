@@ -3,12 +3,11 @@
 @tailwind utilities;
 
 @layer base {
-
   #root {
     overflow-x: hidden;
     @apply scroll-smooth h-[100%] w-[100%] overflow-x-hidden m-0 p-0 scrollbar-thin;
   }
-  
+
   html {
     @apply scroll-smooth h-[100%] w-[100%] overflow-x-hidden m-0 p-0 scrollbar-thin;
   }
@@ -74,7 +73,7 @@
 
   .section-heading {
     text-shadow: 0px 5px 18px #2c62be;
-    @apply text-[white];
+    @apply text-[white] text-4xl;
   }
 
   .nav-item {
