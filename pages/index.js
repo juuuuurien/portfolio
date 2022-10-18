@@ -34,10 +34,10 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <title>Julien Lopez</title>
+        <title>Julien Lopez Portfolio | Fullstack Web Developer</title>
         <meta
           name="description"
-          content="Developer portfolio created by Julien Lopez"
+          content="Julien Lopez is a freelance fullstack web developer. This portfolio exemplifies his experience with SEO, hosting, developing, and creating websites."
         />
         <link rel="icon" href="/favicon2.ico" />
       </Head>
