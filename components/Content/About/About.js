@@ -119,7 +119,7 @@ const About = ({ setNavHighlight }) => {
           />
         </motion.div>
       </div>
-      <div className="flex flex-row gap-4 w-full justify-center mt-10">
+      <div className="flex flex-col md:flex-row gap-4 w-full justify-center mt-10">
         <WorkCard>
           <div className="flex flex-row justify-between align-center">
             <motion.span
