@@ -142,7 +142,7 @@ const About = ({ setNavHighlight }) => {
             At ModSquad, I worked with a team of like-minded moderators to help manage, build, and
             protect online communities all over the world.
           </p>
-          <ul className="text-left">
+          <ul className="flex flex-col gap-2 text-left">
             <li className="text-sm pl-5">
               Participated in company wide content moderation proposals.
             </li>
@@ -177,7 +177,7 @@ const About = ({ setNavHighlight }) => {
             At 2Leaf Web Development, I was responsible for creating, maintaining, reviewing, and
             shipping software created by for various clients around Sacramento and beyond.
           </p>
-          <ul className="text-left">
+          <ul className="flex flex-col gap-2 text-left">
             <li className="text-sm pl-5">Built maintainable RESTful APIs from the ground up.</li>
             <li className="text-sm pl-5">
               Created beautiful and responsive websites and apps in JavaScript and TypeScript using
