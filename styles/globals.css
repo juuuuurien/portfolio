@@ -45,8 +45,18 @@
     @apply text-lg sm:text-xl;
   }
 
-  li {
+  nav li {
     @apply cursor-pointer;
+  }
+
+  section li {
+    position: relative;
+  }
+  section li::before {
+    content: "▹";
+    position: absolute;
+    left: 0px;
+    color: #498fd5;
   }
 
   button {
