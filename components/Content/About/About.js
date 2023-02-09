@@ -2,7 +2,7 @@ import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import ModSquad from "../../../public/assets/modsquad.svg";
-import TwoLeaf from "../../../public/assets/2leaf.svg";
+import TwoLeaf from "../../../public/assets/2Leaf.svg";
 import CFX from "../../../public/assets/CFX_white.png";
 import Selfie from "../../../public/assets/selfie.png";
 import Selfie2 from "../../../public/assets/selfie2.png";
