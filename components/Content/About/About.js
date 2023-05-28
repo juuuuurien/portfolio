@@ -4,11 +4,17 @@ import Image from "next/image";
 import ModSquad from "../../../public/assets/modsquad.svg";
 import TwoLeaf from "../../../public/assets/2Leaf.svg";
 import CFX from "../../../public/assets/CFX_white.png";
+import CFXLogo from "../../../public/assets/CFX Logo.jpg";
 import Selfie from "../../../public/assets/selfie.png";
 import Selfie2 from "../../../public/assets/selfie2.png";
 import Selfie3 from "../../../public/assets/selfie3.png";
 
-import { AiFillGithub, AiFillInstagram, AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
+import {
+  AiFillGithub,
+  AiFillInstagram,
+  AiFillTwitterCircle,
+  AiFillLinkedin,
+} from "react-icons/ai";
 import WorkCard from "./components/WorkCard";
 
 const About = ({ setNavHighlight }) => {
@@ -64,12 +70,12 @@ const About = ({ setNavHighlight }) => {
       <motion.h3 variants={children} className="section-heading mb-10">
         Who I am
       </motion.h3>
-      <div className="flex flex-col md:flex-row max-w-[80%] self-center">
-        <div className="flex flex-col my-10 md:mx-5 justify-between">
-          <motion.p variants={children}>
-            I am a Filipino-American 🇵🇭 Software Engineer specializing in the Front End. Using
-            modern technologies such as React and React Native, I strive to make smooth,
-            design-minded digital experiences!
+      <div className="flex flex-col md:flex-row self-center">
+        <div className="flex flex-col my-10 justify-between">
+          <motion.p className=" max-w-[80%]" variants={children}>
+            I am a Filipino-American 🇵🇭 Software Engineer specializing in the
+            Front End. Using modern technologies such as React and React Native,
+            I strive to make smooth, design-minded digital experiences!
           </motion.p>
           {/* <motion.p variants={children}>
             I am currently working as the Lead Developer over at 2Leaf Web Development{" "}
@@ -81,7 +87,7 @@ const About = ({ setNavHighlight }) => {
               }}
             >
               <a href="https://2leaf.com/" target="_new">
-                <Image src={TwoLeaf} width="40" height="40" />
+                <Image src={TwoLeaf} width="50" height="50" />
               </a>
             </motion.span>
             {
@@ -112,6 +118,7 @@ const About = ({ setNavHighlight }) => {
           className="flex self-center rounded-[50px] border-2 border-[#498fd5]"
         >
           <Image
+            alt="logo"
             src={Selfie3}
             width={640}
             height={640}
@@ -121,7 +128,7 @@ const About = ({ setNavHighlight }) => {
       </div>
       <div className="flex flex-col md:flex-row gap-4 w-full justify-center mt-10">
         <WorkCard>
-          <div className="flex flex-row justify-between align-center">
+          <div className="flex flex-row justify-around items-center">
             <motion.span
               className="inline-block"
               whileHover={{
@@ -130,7 +137,7 @@ const About = ({ setNavHighlight }) => {
               }}
             >
               <a href="https://modsquad.com/" target="_new">
-                <Image src={ModSquad} width="64" height="50" />
+                <Image alt="logo" src={ModSquad} width="64" height="50" />
               </a>
             </motion.span>
             <p className="text-sm text-right">2020 - 2022</p>
@@ -139,8 +146,8 @@ const About = ({ setNavHighlight }) => {
           <h5>ModSquad</h5>
           <br />
           <p className="text-sm mb-6">
-            At ModSquad, I worked with a team of like-minded moderators to help manage, build, and
-            protect online communities all over the world.
+            At ModSquad, I worked with a team of like-minded moderators to help
+            manage, build, and protect online communities all over the world.
           </p>
           <ul className="flex flex-col gap-2 text-left">
             <li className="text-sm pl-5">
@@ -150,13 +157,13 @@ const About = ({ setNavHighlight }) => {
               Was responsible for the onboarding of incoming content moderators.
             </li>
             <li className="text-sm pl-5">
-              Regularly adhered to and proposed moderation guidelines for the company and their
-              clients.
+              Regularly adhered to and proposed moderation guidelines for the
+              company and their clients.
             </li>
           </ul>
         </WorkCard>
         <WorkCard>
-          <div className="flex flex-row justify-between align-center">
+          <div className="flex flex-row justify-around items-center">
             <motion.span
               className="inline-block"
               whileHover={{
@@ -165,33 +172,82 @@ const About = ({ setNavHighlight }) => {
               }}
             >
               <a href="https://2Leaf.com/" target="_new">
-                <Image src={TwoLeaf} width="40" height="40" />
+                <Image alt="logo" src={TwoLeaf} width="50" height="50" />
               </a>
             </motion.span>
-            <p className="text-sm text-right">2022 - 2023</p>
+            <p className="text-sm text-right">2023 - Present</p>
           </div>
           <br />
           <h5>2Leaf Web Development</h5>
           <br />
           <p className="text-sm mb-6">
-            At 2Leaf Web Development, I was responsible for creating, maintaining, reviewing, and
-            shipping software created by for various clients around Sacramento and beyond.
+            At 2Leaf Web Development, I was responsible for creating,
+            maintaining, reviewing, and shipping software created by for various
+            clients around Sacramento and beyond.
           </p>
           <ul className="flex flex-col gap-2 text-left">
-            <li className="text-sm pl-5">Built maintainable RESTful APIs from the ground up.</li>
             <li className="text-sm pl-5">
-              Created beautiful and responsive websites and apps in JavaScript and TypeScript using
-              technologies such as React, React Native, plain HTML & CSS, PHP and more.
+              Built maintainable RESTful APIs from the ground up.
             </li>
             <li className="text-sm pl-5">
-              Built backend applications using technologies such as Node.js, Express, MongoDB ,
-              MySQL.
+              Created beautiful and responsive websites and apps in JavaScript
+              and TypeScript using technologies such as React, React Native,
+              plain HTML & CSS, PHP and more.
             </li>
             <li className="text-sm pl-5">
-              Deployed apps onto SaaS based platforms such as AWS EC2, AWS S3, cPanel and more.
+              Built backend applications using technologies such as Node.js,
+              Express, MongoDB , MySQL.
+            </li>
+            <li className="text-sm pl-5">
+              Deployed apps onto SaaS based platforms such as AWS EC2, AWS S3,
+              cPanel and more.
             </li>
             <li className="text-sm pl-5">
               Reviewed, merging, and shipping code created by my peers.
+            </li>
+          </ul>
+        </WorkCard>
+        <WorkCard>
+          <div className="flex flex-row justify-around items-center">
+            <motion.span
+              className="inline-block"
+              whileHover={{
+                y: -5,
+                transition: { duration: 0.1 },
+              }}
+            >
+              <a href="https://2Leaf.com/" target="_new">
+                <Image alt="logo" src={CFXLogo} width="60" height="50" />
+              </a>
+            </motion.span>
+            <p className="text-sm text-right">2022 - 2023</p>
+          </div>
+          <br />
+          <h5>California Fruit Exchange</h5>
+          <br />
+          <p className="text-sm mb-6">
+            As a Front End Developer at the California Fruit Exchange, I create
+            beautiful and intuitive user interfaces for the company's internal
+            and external applications using technologies such as PHP, Laravel,
+            and Vue.
+          </p>
+          <ul className="flex flex-col gap-2 text-left">
+            <li className="text-sm pl-5">
+              Maintained and created new features for the company's internal
+              production management systems.
+            </li>
+            <li className="text-sm pl-5">
+              Utilized Shopify's Liquid templating language to create and
+              maintain multiple online storefronts.
+            </li>
+            <li className="text-sm pl-5">
+              Built API endpoints to sync Shopify data using their many APIs and
+              webhooks.
+            </li>
+            <li className="text-sm pl-5">
+              In the process of learning DevOp and CI/CD practices to help
+              streamline the company's development process utilizing
+              technologies such as Terraform and Jenkins.
             </li>
           </ul>
         </WorkCard>

@@ -11,6 +11,8 @@ import Logo from "../../public/assets/jl-logo.svg";
 
 import MenuButton from "./MenuButton";
 
+import Link from "next/link";
+
 import {
   AiFillGithub,
   AiFillInstagram,
@@ -109,11 +111,15 @@ const Navbar = () => {
                 </motion.div>
               );
             })}
-            {/* <motion.li className="nav-item hover:translate-y-[-5px] translate-y-0 ">
-              <a href={PDF} target="_blank">
+            <motion.li className="nav-item hover:translate-y-[-5px] translate-y-0 ">
+              <Link
+                href="/resume.pdf"
+                // open in new tab
+                target="_blank"
+              >
                 Resume
-              </a>
-            </motion.li> */}
+              </Link>
+            </motion.li>
             <div className="flex flex-row gap-3">
               <motion.div whileHover={{ y: -5 }}>
                 <a href="https://github.com/juuuuurien">
