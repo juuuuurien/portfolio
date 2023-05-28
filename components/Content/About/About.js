@@ -175,7 +175,7 @@ const About = ({ setNavHighlight }) => {
                 <Image alt="logo" src={TwoLeaf} width="50" height="50" />
               </a>
             </motion.span>
-            <p className="text-sm text-right">2023 - Present</p>
+            <p className="text-sm text-right">2022 - 2023</p>
           </div>
           <br />
           <h5>2Leaf Web Development</h5>
@@ -220,7 +220,7 @@ const About = ({ setNavHighlight }) => {
                 <Image alt="logo" src={CFXLogo} width="60" height="50" />
               </a>
             </motion.span>
-            <p className="text-sm text-right">2022 - 2023</p>
+            <p className="text-sm text-right">2022 - Present</p>
           </div>
           <br />
           <h5>California Fruit Exchange</h5>
