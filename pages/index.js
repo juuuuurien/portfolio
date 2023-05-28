@@ -24,7 +24,7 @@ export default function Home() {
     let timeout = setTimeout(() => {
       console.log("settings false");
       setLoading(false);
-    }, 2000);
+    }, 1500);
 
     return () => {
       clearTimeout(timeout);
@@ -48,7 +48,7 @@ export default function Home() {
             initial={{ opacity: 1 }}
             animate={{
               opacity: 0.8,
-              transition: { delay: 0.15, duration: 0.8 },
+              transition: { delay: 0.1, duration: 0.8 },
             }}
             exit={{ opacity: 0 }}
             className="flex flex-col items-center justify-center w-screen h-screen bg-[#06070a] "
@@ -60,7 +60,7 @@ export default function Home() {
                 opacity: 0,
                 transition: {
                   duration: 0.4,
-                  delay: 1.2,
+                  delay: 1.0,
                 },
               }}
               exit={{

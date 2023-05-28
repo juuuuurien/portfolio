@@ -68,11 +68,16 @@ const About = ({ setNavHighlight }) => {
       className="flex flex-col mx-auto py-[5vh] lg:max-w-[55%] max-w-[80%] gap-10"
       viewport={{ once: true, amount: 0.2 }}
     >
-      <motion.h3 variants={children} className="section-heading mb-10">
+      <motion.h3 variants={children} className="section-heading mb-2">
         Who I am
       </motion.h3>
       <div className="flex flex-col md:flex-row self-center">
         <div className="flex flex-col my-10 justify-between">
+          <motion.p className=" text-[#CA9F0D]" variants={children}>
+            Hi, my name is <span className="font-bold">Julien Lopez.</span>
+            <br />
+            <br />
+          </motion.p>
           <motion.p className=" max-w-[80%]" variants={children}>
             I am a Filipino-American 🇵🇭 Software Engineer specializing in the
             Front End. Using modern technologies such as React and React Native,
